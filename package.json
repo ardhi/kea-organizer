@@ -1,0 +1,32 @@
+{
+  "name": "kea-organizer",
+  "version": "0.0.1",
+  "description": "Organize a bunch of your very own modules as an object or a class instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT",
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/tests/data"
+    ],
+    "testMatch": [
+      "**/tests/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
+  "dependencies": {
+    "globby": "^10.0.1",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "lodash.without": "^4.4.0"
+  }
+}
