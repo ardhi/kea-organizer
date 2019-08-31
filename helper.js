@@ -6,7 +6,8 @@ const funcs = {
   getFilesAndKeyBuilder: function (options) {
     options = options || {}
     options.skipSuffix = options.skipSuffix || '_'
-    const files = globby.sync(`${options.baseDir}/**/*.js`, {
+    options.extention = options.extention || '.js'
+    const files = globby.sync(`${options.baseDir}/**/*${options.extention}`, {
       ignore: [`${options.baseDir}/**/${options.skipSuffix}*`]
     })
     let keyBuilder = defKeyBuilder.camelCase

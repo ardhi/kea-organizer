@@ -3,6 +3,7 @@ const kebabCase = require('lodash.kebabcase')
 
 function normalizeOpts (opts) {
   opts = opts || {}
+  opts.extention = opts.extention || '.js'
   return opts
 }
 
@@ -15,13 +16,13 @@ const funcs = {
   camelCase: function (file, opts) {
     opts = normalizeOpts(opts)
     let fname = stripBase(file, opts)
-    fname = fname.replace('.js', '')
+    fname = fname.replace(opts.extention, '')
     return camelCase(fname)
   },
   kebabCase: function (file, opts) {
     opts = normalizeOpts(opts)
     let fname = stripBase(file, opts)
-    fname = fname.replace('.js', '').replace(/\//g, ' ')
+    fname = fname.replace(opts.extention, '').replace(/\//g, ' ')
     const parts = kebabCase(fname).split('-')
     const newParts = []
     parts.forEach((p, i) => {

@@ -1,6 +1,6 @@
 {
   "name": "kea-organizer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Organize a bunch of your very own modules as an object or a class instance",
   "main": "index.js",
   "scripts": {
